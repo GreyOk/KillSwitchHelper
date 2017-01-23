@@ -1,0 +1,11 @@
+[Desktop Entry]
+Name=Kill Switch Helper
+GenericName=Kill Switch App
+Comment=An application for removing and re-adding network routes with a user interface. It helps VPN users prevent data from being transferred through network routes that they don't want. Acting as a kill switch when a VPN connection is lost if used properly without the need of a firewall.
+Categories=Utility;
+Exec=KillSwitchHelper
+Icon=killswitchhelper
+Terminal=false
+Type=Application
+X-GNOME-Gettext-Domain=killswitchhelper
+Keywords=kill;switch;
