@@ -167,6 +167,22 @@ using Pango;
 	      this.killSwitchHelperAboutDialog.set_modal (true);
         this.killSwitchHelperAboutDialog.logo_icon_name = "killswitchhelper";
 
+        // HeaderBar
+        HeaderBar killSwitchHelperHeaderBar = new HeaderBar ();
+        killSwitchHelperHeaderBar.set_title ("Kill Switch Helper");
+        killSwitchHelperHeaderBar.show_close_button = true;
+        // The help menu button
+        MenuButton helpMenuButton = builder.get_object ("helpMenuButton") as MenuButton;
+        helpMenuButton.image = new Gtk.Image.from_icon_name ("dialog-information", Gtk.IconSize.LARGE_TOOLBAR);
+        helpMenuButton.label = "Help";
+        helpMenuButton.set_always_show_image (true);
+        // Add the help menu button to the header bar
+        killSwitchHelperHeaderBar.pack_end (helpMenuButton);
+        // Set the application title bar to the HeaderBar created above
+        killSwitchMainWindow.set_titlebar (killSwitchHelperHeaderBar);
+        // Show the heade bar
+        killSwitchHelperHeaderBar.show ();
+
         //Connect all signals
         connect_signals();
 
